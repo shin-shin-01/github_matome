@@ -38,6 +38,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # control state
+  hooks_riverpod: ^1.0.3
+  # for UI
+  google_fonts: ^2.1.0
+  stacked: ^2.2.3
+  # for services locator
+  get_it: ^7.2.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
