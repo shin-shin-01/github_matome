@@ -1,6 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:github_matome/ui/theme/app_theme.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+/// タイトル
+class TitleWidget extends HookConsumerWidget {
+  const TitleWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final Size size = MediaQuery.of(context).size;
+    final theme = ref.watch(appThemeProvider);
+    return Column(children: [
+      Image.asset(
+        // TODO: fix here
+        'assets/images/GitHub_Logo_Light.png',
+        width: size.width * 0.4,
+        fit: BoxFit.fill,
+      ),
+      Text(
+        "21",
+        style: GoogleFonts.caveat(textStyle: theme.textTheme.h90.bold()),
+      ),
+      Text(
+        "SUMMARY",
+        style: GoogleFonts.caveat(textStyle: theme.textTheme.h90.bold()),
+      ),
+    ]);
+  }
+}
 
 // GitHubのアイコン
 class GitHubIcon extends HookConsumerWidget {

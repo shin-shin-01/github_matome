@@ -19,13 +19,33 @@ class HomeView extends StatelessWidget {
       onModelReady: (model) => model.initialize(),
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(
-          title: const Text('GitHub Summary'),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // GitHub Icon
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  // TODO; fix here
+                  'assets/images/GitHub-Mark-Light-120px-plus.png',
+                  width: 30,
+                  height: 30,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              const SizedBox(width: 20),
+              // Title
+              const Text('GitHub Summary'),
+            ],
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: betweenHeight),
+              const TitleWidget(),
               SizedBox(height: betweenHeight),
               // GitHub のアイコン
               const GitHubIcon(),
