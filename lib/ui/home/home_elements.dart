@@ -1,6 +1,10 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:github_matome/ui/theme/app_theme.dart';
+import 'package:heatmap_calendar/heatmap_calendar.dart';
+import 'package:heatmap_calendar/time_utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 /// タイトル
@@ -43,6 +47,53 @@ class GitHubIcon extends HookConsumerWidget {
         width: 200,
         height: 200,
         fit: BoxFit.fill,
+      ),
+    );
+  }
+}
+
+// GitHub草カレンダー
+class GitHubGrassCalendar extends HookConsumerWidget {
+  const GitHubGrassCalendar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 0.7,
+      child: HeatMapCalendar(
+        input: {
+          TimeUtils.removeTime(DateTime.now().subtract(Duration(days: 50))): 20,
+          TimeUtils.removeTime(DateTime.now().subtract(Duration(days: 3))): 5,
+          TimeUtils.removeTime(DateTime.now().subtract(Duration(days: 2))): 35,
+          TimeUtils.removeTime(DateTime.now().subtract(Duration(days: 1))): 14,
+          TimeUtils.removeTime(DateTime.now()): 5,
+        },
+        colorThresholds: {
+          1: Colors.green[100]!,
+          10: Colors.green[300]!,
+          30: Colors.green[500]!
+        },
+        weekDaysLabels: [for (var i = 0; i < 7; i++) ""],
+        monthsLabels: const [
+          "",
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        squareSize: 16.0,
+        textOpacity: 0.3,
+        labelTextColor: Colors.blueGrey,
+        dayTextColor: Colors.transparent,
       ),
     );
   }

@@ -50,6 +50,9 @@ class HomeView extends StatelessWidget {
               // GitHub のアイコン
               const GitHubIcon(),
               SizedBox(height: betweenHeight),
+              // GitHub草カレンダー
+              const GitHubGrassCalendar(),
+              SizedBox(height: betweenHeight),
               // トータルコミット数
               const TotalCommitCount(),
               SizedBox(height: betweenHeight),
