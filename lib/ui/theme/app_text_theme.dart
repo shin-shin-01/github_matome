@@ -11,6 +11,7 @@ class AppTextTheme {
     required this.h60,
     required this.h70,
     required this.h80,
+    required this.h90,
   });
 
   factory AppTextTheme() {
@@ -28,6 +29,7 @@ class AppTextTheme {
       h60: const TextStyle(fontSize: FontSize.pt24).merge(_normalRegular),
       h70: const TextStyle(fontSize: FontSize.pt32).merge(_normalRegular),
       h80: const TextStyle(fontSize: FontSize.pt40).merge(_normalRegular),
+      h90: const TextStyle(fontSize: FontSize.pt60).merge(_normalRegular),
     );
   }
 
@@ -54,6 +56,9 @@ class AppTextTheme {
 
   /// pt40
   final TextStyle h80;
+
+  /// pt60
+  final TextStyle h90;
 }
 
 extension TextStyleExt on TextStyle {

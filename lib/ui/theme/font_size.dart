@@ -1,4 +1,7 @@
 class FontSize {
+  /// 60pt
+  static const double pt60 = 60;
+
   /// 40pt
   static const double pt40 = 40;
 
