@@ -12,8 +12,16 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
-        viewModelBuilder: () => HomeViewModel(),
-        onModelReady: (model) => model.initialize(),
-        builder: (context, model, child) => const SizedBox());
+      viewModelBuilder: () => HomeViewModel(),
+      onModelReady: (model) => model.initialize(),
+      builder: (context, model, child) => Scaffold(
+        appBar: AppBar(
+          title: const Text('appBar'),
+        ),
+        body: const Center(
+          child: Text("body"),
+        ),
+      ),
+    );
   }
 }
