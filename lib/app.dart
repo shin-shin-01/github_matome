@@ -12,7 +12,7 @@ class App extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = ref.watch(appThemeProvider);
     return MaterialApp(
-      title: 'GitHub Matome',
+      title: 'GitHub Summary',
       theme: theme.data,
       navigatorKey: servicesLocator<NavigationService>().navigatorKey,
       onGenerateRoute: NavigationService.generateRoute,
