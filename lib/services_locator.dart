@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:github_matome/services/authentication.dart';
-import 'package:github_matome/services/navigation.dart';
+import 'package:github_summary/services/authentication.dart';
+import 'package:github_summary/services/navigation.dart';
 
 /// servicesLocator
 GetIt servicesLocator = GetIt.instance;

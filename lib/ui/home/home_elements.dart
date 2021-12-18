@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:github_matome/ui/theme/app_theme.dart';
+import 'package:github_summary/ui/theme/app_theme.dart';
 import 'package:heatmap_calendar/heatmap_calendar.dart';
 import 'package:heatmap_calendar/time_utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

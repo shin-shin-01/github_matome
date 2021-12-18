@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.github_matome">
+    package="com.example.github_summary">
    <application
-        android:label="github_matome"
+        android:label="github_summary"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

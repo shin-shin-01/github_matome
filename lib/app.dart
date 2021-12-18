@@ -1,7 +1,7 @@
-import 'package:github_matome/services/navigation.dart';
-import 'package:github_matome/services_locator.dart';
-import 'package:github_matome/ui/home/home_view.dart';
-import 'package:github_matome/ui/theme/app_theme.dart';
+import 'package:github_summary/services/navigation.dart';
+import 'package:github_summary/services_locator.dart';
+import 'package:github_summary/ui/home/home_view.dart';
+import 'package:github_summary/ui/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
