@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:github_matome/shared/app_bar.dart';
+import 'package:github_summary/shared/app_bar.dart';
 import 'package:stacked/stacked.dart';
-import 'package:github_matome/ui/home/home_elements.dart';
-import 'package:github_matome/ui/home/home_viewmodel.dart';
+import 'package:github_summary/ui/home/home_elements.dart';
+import 'package:github_summary/ui/home/home_viewmodel.dart';
 
 class HomeView extends StatelessWidget {
   static const routeName = '/home';

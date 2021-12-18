@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_matome/ui/home/home_view.dart';
+import 'package:github_summary/ui/home/home_view.dart';
 
 /// Navigator を UI から取り出して、
 /// 他の関数の中から使えるようにする

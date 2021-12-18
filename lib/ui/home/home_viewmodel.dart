@@ -1,5 +1,5 @@
-import 'package:github_matome/services/authentication.dart';
-import 'package:github_matome/services_locator.dart';
+import 'package:github_summary/services/authentication.dart';
+import 'package:github_summary/services_locator.dart';
 import 'package:stacked/stacked.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

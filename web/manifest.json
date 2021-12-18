@@ -1,6 +1,6 @@
 {
-    "name": "github_matome",
-    "short_name": "github_matome",
+    "name": "github_summary",
+    "short_name": "github_summary",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

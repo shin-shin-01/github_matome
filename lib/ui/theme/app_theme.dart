@@ -1,10 +1,10 @@
-import 'package:github_matome/ui/theme/app_colors.dart';
-import 'package:github_matome/ui/theme/app_text_theme.dart';
+import 'package:github_summary/ui/theme/app_colors.dart';
+import 'package:github_summary/ui/theme/app_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-export 'package:github_matome/ui/theme/app_text_theme.dart' show TextStyleExt;
+export 'package:github_summary/ui/theme/app_text_theme.dart' show TextStyleExt;
 
 final appThemeModeProvider =
     StateNotifierProvider<StateController<ThemeMode>, ThemeMode>(

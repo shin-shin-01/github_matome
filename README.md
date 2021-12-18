@@ -1,4 +1,4 @@
-# github_matome
+# github_summary
 
 A new Flutter project.
 

@@ -1,4 +1,4 @@
-package com.example.github_matome
+package com.example.github_summary
 
 import io.flutter.embedding.android.FlutterActivity
 
