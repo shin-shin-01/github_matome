@@ -36,17 +36,43 @@ class TitleWidget extends HookConsumerWidget {
 
 // GitHubのアイコン
 class GitHubIcon extends HookConsumerWidget {
-  const GitHubIcon({Key? key}) : super(key: key);
+  const GitHubIcon({
+    Key? key,
+    required this.photoURL,
+  }) : super(key: key);
+
+  final String photoURL;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(90),
       child: Image.network(
-        'https://avatars.githubusercontent.com/u/51741264?v=4',
+        photoURL,
         width: 200,
         height: 200,
         fit: BoxFit.fill,
+      ),
+    );
+  }
+}
+
+// ユーザー名
+class UserName extends HookConsumerWidget {
+  const UserName({
+    Key? key,
+    required this.displayName,
+  }) : super(key: key);
+
+  final String displayName;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.watch(appThemeProvider);
+    return Text(
+      displayName,
+      style: GoogleFonts.caveat(
+        textStyle: theme.textTheme.h70.bold(),
       ),
     );
   }
