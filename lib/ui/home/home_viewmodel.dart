@@ -1,5 +1,23 @@
+import 'package:github_matome/services/authentication.dart';
+import 'package:github_matome/services_locator.dart';
 import 'package:stacked/stacked.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeViewModel extends BaseViewModel {
-  void initialize() {}
+  final _auth = servicesLocator<AuthService>();
+  bool isSignedIn = false;
+  User? currentUser;
+
+  void initialize() {
+    isSignedIn = _auth.isSignedIn();
+    currentUser = _auth.getCurrentUser();
+  }
+
+  void signIn() async {
+    await _auth.signIn();
+    isSignedIn = _auth.isSignedIn();
+    currentUser = _auth.getCurrentUser();
+    print(await currentUser!.getIdToken());
+    notifyListeners();
+  }
 }
